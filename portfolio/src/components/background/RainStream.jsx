@@ -3,25 +3,43 @@
 import { useState, useEffect, useRef } from 'react';
 
 const VALID_CHARS = `abcdefghijklmnopqrstuvwxyz0123456789$+-*/=%"'#&_(),.;:?!\\|{}<>[]^~`;
+const STREAM_MUTATION_ODDS = 0.02;
 
-const MIN_STREAM_SIZE = 15;
-const MAX_STREAM_SIZE = 40;
+const MIN_STREAM_SIZE = 10;
+const MAX_STREAM_SIZE = 25;
 
+// Get a random integer between min (inclusive) and max (exclusive)
 const getRandInRange = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min;
 };
 
+// Get a random character from VALID_CHARS
 const getRandChar = () => {
   return VALID_CHARS.charAt(Math.floor(Math.random() * VALID_CHARS.length));
 };
 
+// Generate a random stream of characters with a size between MIN_STREAM_SIZE and MAX_STREAM_SIZE
 const getRandStream = () => {
   return new Array(getRandInRange(MIN_STREAM_SIZE, MAX_STREAM_SIZE))
     .fill(undefined)
     .map(() => getRandChar());
 };
 
-// Custom useInterval hook
+// Mutate the stream with a probability of STREAM_MUTATION_ODDS
+const getMutatedStream = (stream) => {
+  const newStream = [];
+  for (let i = 1; i < stream.length; i++) {
+    if (Math.random() < STREAM_MUTATION_ODDS) {
+      newStream.push(getRandChar());
+    } else {
+      newStream.push(stream[i]);
+    }
+  }
+  newStream.push(getRandChar());
+  return newStream;
+};
+
+// Custom useInterval hook to handle intervals
 function useInterval(callback, delay) {
   const savedCallback = useRef();
 
@@ -34,19 +52,25 @@ function useInterval(callback, delay) {
       savedCallback.current();
     }
     if (delay !== null) {
-      let id = setInterval(tick, delay);
+      const id = setInterval(tick, delay);
       return () => clearInterval(id);
     }
   }, [delay]);
 }
 
 const RainStream = () => {
-  const [topPadding, setTopPadding] = useState(0);
-  const stream = getRandStream();
+  const [stream, setStream] = useState(getRandStream());
+  const [topPadding, setTopPadding] = useState(stream.length * -50);
 
   useInterval(() => {
-    setTopPadding((prev) => prev + 44);
-  }, 100);
+    if (topPadding > window.innerHeight) {
+      setTopPadding(0);
+      setStream(getRandStream);
+    } else {
+      setTopPadding(topPadding + 44);
+      setStream(getMutatedStream);
+    }
+  }, 175);
 
   return (
     <div

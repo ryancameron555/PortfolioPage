@@ -2,6 +2,7 @@
 import RainStream from './RainStream';
 
 const MatrixRain = () => {
+  const streamCount = Math.floor(window.innerWidth / 26);
   return (
     <div
       style={{
@@ -11,10 +12,13 @@ const MatrixRain = () => {
         left: '0',
         right: '0',
         background: 'black',
+        display: 'flex',
         zIndex: '-1',
       }}
     >
-      <RainStream />
+      {new Array(streamCount).fill().map(() => (
+        <RainStream />
+      ))}
     </div>
   );
 };
