@@ -17,6 +17,7 @@ const MatrixRain = () => {
       }}
     >
       {new Array(streamCount).fill().map(() => (
+        // eslint-disable-next-line react/jsx-key
         <RainStream />
       ))}
     </div>

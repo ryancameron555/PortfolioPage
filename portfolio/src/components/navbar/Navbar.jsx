@@ -16,7 +16,7 @@ import MenuItem from '@mui/material/MenuItem';
 // import AdbIcon from '@mui/icons-material/Adb';
 import logo from '../../assets/rwcLogo.svg';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['About me', 'Projects', 'Certifications', 'Contact me'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 const myName = 'RYAN CAMERON 1999';
 
@@ -40,7 +40,7 @@ function ResponsiveAppBar() {
   // };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" color="default" sx={{ backgroundColor: 'black' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -78,6 +78,7 @@ function ResponsiveAppBar() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
+              sx={{ color: 'white' }}
             >
               <MenuIcon />
             </IconButton>
@@ -120,7 +121,7 @@ function ResponsiveAppBar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: 'white',
               textDecoration: 'none',
             }}
           >
