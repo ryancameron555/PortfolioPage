@@ -43,21 +43,8 @@ function ResponsiveAppBar() {
     <AppBar position="static" color="default" sx={{ backgroundColor: 'black' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
+          {/* Logo components */}
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <img
               src={logo}
               alt="Logo"
@@ -67,10 +54,44 @@ function ResponsiveAppBar() {
                 marginRight: '10px',
               }}
             />
-          </Typography>
+          </Box>
+
+          {/* Flex grow box to push items to the right */}
+          <Box sx={{ flexGrow: 6, display: { xs: 'none', md: 'flex' } }} />
+
+          {/* RWC text */}
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textAlign: 'center',
+            }}
+          >
+            <Typography
+              variant="h5"
+              component="div"
+              sx={{
+                fontFamily: 'monospace',
+                fontWeight: 700,
+                letterSpacing: '.3rem',
+                color: 'white',
+                textDecoration: 'none',
+                overflowWrap: 'break-word',
+                wordBreak: 'break-word',
+                maxWidth: { xs: '100%', md: 'auto' },
+              }}
+            >
+              {myName}
+            </Typography>
+          </Box>
+
+          {/* Flex grow box to push items to the right */}
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} />
 
           {/*Small screen hamburger menu for pages  */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ display: { xs: 'flex', md: 'none' }, flexGrow: 0 }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -108,28 +129,8 @@ function ResponsiveAppBar() {
             </Menu>
           </Box>
 
-          {/* Small screen RWC text */}
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'white',
-              textDecoration: 'none',
-            }}
-          >
-            <Typography>{myName}</Typography>
-          </Typography>
-
-          {/* Main pages */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          {/* Large Screen App bar container and page links*/}
+          <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
@@ -140,6 +141,7 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
+
           {/* Settings menu for user account */}
           {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
