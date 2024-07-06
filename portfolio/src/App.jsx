@@ -3,6 +3,7 @@
 import './App.css';
 import ResponsiveAppBar from './components/navbar/Navbar';
 import MatrixRain from './components/background/MatrixRain';
+import AboutMe from './components/ContentContainers/AboutMe';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <MatrixRain />
       <div>
         <ResponsiveAppBar />
+        <AboutMe />
       </div>
     </>
   );
