@@ -18,7 +18,7 @@ import logo from '../../assets/rwcLogo.svg';
 
 const pages = ['About me', 'Projects', 'Certifications', 'Contact me'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-const myName = 'RYAN CAMERON 1999';
+const myName = 'RYAN CAMERON';
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -73,7 +73,7 @@ function ResponsiveAppBar() {
               variant="h5"
               component="div"
               sx={{
-                fontFamily: 'monospace',
+                fontFamily: 'Roboto Mono, monospace',
                 fontWeight: 700,
                 letterSpacing: '.3rem',
                 color: 'white',
@@ -130,12 +130,28 @@ function ResponsiveAppBar() {
           </Box>
 
           {/* Large Screen App bar container and page links*/}
-          <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
+          <Box
+            sx={{
+              flexGrow: 0,
+              display: {
+                xs: 'none',
+                md: 'flex',
+              },
+            }}
+          >
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{
+                  my: 2,
+                  color: 'white',
+                  display: 'block',
+                  '&:hover': {
+                    color: '#20c20e', // Green color on hover
+                    textShadow: '0px 0px 8px rgba(32, 194, 14, 0.8)', // Text shadow on hover
+                  },
+                }}
               >
                 {page}
               </Button>
