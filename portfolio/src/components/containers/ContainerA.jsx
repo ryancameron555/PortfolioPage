@@ -2,20 +2,26 @@
 // Container which is centred on page with opacity. All text will be centred.
 import { Box } from '@mui/material';
 import PropTypes from 'prop-types';
+import { useTheme } from '@mui/material/styles';
 
 const ContainerA = ({ children }) => {
+  const theme = useTheme();
   return (
     <Box
       sx={{
         width: '75%',
-        margin: '0 auto',
-        padding: '10px',
-        backgroundColor: 'background.primary',
+        margin: '10vh auto', // Adjusted margin for vertical spacing
+        padding: '20px',
+        backgroundColor: theme.palette.background.default,
         textAlign: 'center',
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)', // Center the container
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '20vh',
+        boxShadow: `0 0 20px ${theme.palette.primary.main}`,
+        borderRadius: '2vw',
+        opacity: '0.9',
       }}
     >
       {children}

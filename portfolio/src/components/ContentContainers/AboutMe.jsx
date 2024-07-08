@@ -7,7 +7,7 @@ import ContainerA from '../containers/ContainerA';
 function AboutMe() {
   return (
     <ContainerA>
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h2" gutterBottom>
         About Me
       </Typography>
       <Typography variant="body1">
