@@ -71,12 +71,12 @@ function ResponsiveAppBar() {
                 fontFamily: theme.typography.h1.fontFamily,
                 fontWeight: theme.typography.h1.fontWeight,
                 letterSpacing: theme.typography.h1.letterSpacing,
-                color: theme.palette.text.secondary,
+                color: theme.palette.text.primary,
                 textDecoration: 'none',
                 overflowWrap: 'break-word',
                 wordBreak: 'break-word',
                 maxWidth: { xs: '100%', md: 'auto' },
-                textShadow: '0px 0px 25px rgba(32, 194, 14, 0.9)', // Adjusted text shadow for permanent glow
+                textShadow: `0 0 20px ${theme.palette.secondary.main}`, // Adjusted text shadow for permanent glow
               }}
             >
               {myName}
@@ -95,7 +95,9 @@ function ResponsiveAppBar() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
-              sx={{ color: theme.palette.text.primary }}
+              sx={{
+                color: theme.palette.primary.main,
+              }}
             >
               <MenuIcon />
             </IconButton>
@@ -115,6 +117,13 @@ function ResponsiveAppBar() {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: 'block', md: 'none' },
+                maxWidth: '100%',
+                maxHeight: '100%',
+                '& .MuiPaper-root': {
+                  backgroundColor: theme.palette.background.default,
+                  padding: theme.spacing(2),
+                  boxShadow: `0 0 20px ${theme.palette.primary.main}`,
+                },
               }}
             >
               {pages.map((page) => (

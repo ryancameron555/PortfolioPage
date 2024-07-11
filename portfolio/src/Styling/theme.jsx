@@ -9,7 +9,7 @@ const theme = createTheme({
       main: '#20c20e', // Your primary color for matrix
     },
     secondary: {
-      main: '#f50057', // Your secondary color for matrix
+      main: '#ffffff',
     },
     background: {
       default: '#000000', // Default background color
@@ -23,19 +23,19 @@ const theme = createTheme({
   typography: {
     fontFamily: 'Roboto Mono, monospace', // Default font family
     h1: {
-      fontSize: '3rem',
+      fontSize: '2rem',
       fontFamily: 'inherit',
       fontWeight: 700,
       letterSpacing: '0.5rem',
     },
     h2: {
-      fontSize: '2.5rem',
+      fontSize: '1.75rem',
       fontFamily: 'inherit',
       fontWeight: 700,
       letterSpacing: '.3rem',
     },
     h4: {
-      fontSize: '2rem',
+      fontSize: '1.5',
       fontFamily: 'inherit',
       fontWeight: 700,
       letterSpacing: '.1rem',
