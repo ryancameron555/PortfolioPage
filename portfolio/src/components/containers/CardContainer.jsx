@@ -49,8 +49,8 @@ const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(1),
   textAlign: 'center',
   color: theme.palette.text.secondary,
-
   borderRadius: '2vw',
+  width: '100%',
 }));
 
 export default function CardContainer() {
@@ -58,28 +58,32 @@ export default function CardContainer() {
   return (
     <Box
       sx={{
-        flexGrow: 0,
-        width: '90%',
-        boxShadow: `0 0 20px ${theme.palette.primary.main}`,
+        width: '85%',
+        margin: '10vh auto',
+        padding: '20px',
+        backgroundColor: theme.palette.background.default,
+        opacity: '0.9',
+        // boxShadow: `0 0 20px ${theme.palette.primary.main}`,
+        borderRadius: '2vw',
       }}
     >
-      <Grid container spacing={2}>
-        <Grid item xs={6} md={8}>
+      <Grid container spacing={1}>
+        <Grid item xs={12} sm={6} md={6}>
           <Item>
             <ProjectA />
           </Item>
         </Grid>
-        <Grid item xs={6} md={4}>
+        <Grid item xs={12} sm={6} md={6}>
           <Item>
             <ProjectA />
           </Item>
         </Grid>
-        <Grid item xs={6} md={4}>
+        <Grid item xs={12} sm={6} md={6}>
           <Item>
             <ProjectA />
           </Item>
         </Grid>
-        <Grid item xs={6} md={8}>
+        <Grid item xs={12} sm={6} md={6}>
           <Item>
             <ProjectA />
           </Item>

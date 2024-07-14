@@ -8,6 +8,7 @@ import ResponsiveAppBar from './components/navbar/Navbar';
 import MatrixRain from './components/background/MatrixRain';
 import AboutMe from './components/Content/AboutMe';
 import CardContainer from './components/containers/CardContainer';
+import CertsContainer from './components/containers/CertsContainer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <ResponsiveAppBar />
       <AboutMe />
       <CardContainer />
+      <CertsContainer />
     </ThemeProvider>
   );
 }

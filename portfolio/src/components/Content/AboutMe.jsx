@@ -7,7 +7,7 @@
 /** @format */
 
 import Typography from '@mui/material/Typography';
-import ContainerA from '../containers/ContainerA';
+import ContainerA from '../containers/AboutContainer';
 
 function AboutMe() {
   return (

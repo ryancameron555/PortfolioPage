@@ -15,7 +15,7 @@ import { useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../../assets/rwcLogo.svg';
 
-const pages = ['About me', 'Projects', 'Certifications', 'Contact me'];
+const pages = ['About me', 'Projects', 'Documents', 'Contact me'];
 const myName = 'RYAN CAMERON';
 
 function ResponsiveAppBar() {
@@ -32,9 +32,12 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar
-      position="static"
+      position="fixed"
       color="default"
-      sx={{ backgroundColor: theme.palette.background.default }}
+      sx={{
+        backgroundColor: theme.palette.background.default,
+        marginBottom: '20vh',
+      }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -45,7 +48,7 @@ function ResponsiveAppBar() {
               alt="Logo"
               style={{
                 display: { xs: 'none', md: 'flex' },
-                height: '15vh',
+                height: '12.5vh',
                 marginRight: '10px',
               }}
             />
@@ -74,7 +77,8 @@ function ResponsiveAppBar() {
                 color: theme.palette.text.primary,
                 textDecoration: 'none',
                 overflowWrap: 'break-word',
-                wordBreak: 'break-word',
+                wordBreak: 'keep-all',
+                whiteSpace: 'pre-wrap',
                 maxWidth: { xs: '100%', md: 'auto' },
                 textShadow: `0 0 20px ${theme.palette.secondary.main}`, // Adjusted text shadow for permanent glow
               }}

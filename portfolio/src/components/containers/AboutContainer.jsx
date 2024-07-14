@@ -10,7 +10,7 @@ const ContainerA = ({ children }) => {
     <Box
       sx={{
         width: '85%',
-        margin: '10vh auto', // Adjusted margin for vertical spacing
+        margin: '20vh auto 10vh', // Adjusted margin for vertical spacing
         padding: '20px',
         backgroundColor: theme.palette.background.default,
         textAlign: 'center',
