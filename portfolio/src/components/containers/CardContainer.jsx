@@ -1,45 +1,10 @@
 /** @format */
-// Container which is centred on page with opacity. All text will be centred.
-// import { Box } from '@mui/material';
-// import PropTypes from 'prop-types';
-
-// const CardContainer = ({ children }) => {
-//   const theme = useTheme();
-//   return (
-//     <Box
-//       sx={{
-//         width: '85%',
-//         margin: '10vh auto', // Adjusted margin for vertical spacing
-//         padding: '20px',
-//         backgroundColor: theme.palette.background.default,
-//         textAlign: 'center',
-//         display: 'grid',
-//         flexDirection: 'column',
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         minHeight: '20vh',
-//         boxShadow: `0 0 20px ${theme.palette.primary.main}`,
-//         borderRadius: '2vw',
-//         opacity: '0.8',
-//       }}
-//     >
-//       <h2>My Projects</h2>
-//       {children}
-//     </Box>
-//   );
-// };
-
-// CardContainer.propTypes = {
-//   children: PropTypes.node.isRequired,
-// };
-
-// export default CardContainer;
 
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import { useTheme } from '@mui/material/styles';
+// import { useTheme } from '@mui/material/styles';
 import ProjectA from '../Cards/projectA';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -54,14 +19,14 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function CardContainer() {
-  const theme = useTheme();
+  // const theme = useTheme();
   return (
     <Box
       sx={{
         width: '85%',
         margin: '10vh auto',
-        padding: '20px',
-        backgroundColor: theme.palette.background.default,
+        padding: '0px',
+        // backgroundColor: theme.palette.background.default,
         opacity: '0.9',
         // boxShadow: `0 0 20px ${theme.palette.primary.main}`,
         borderRadius: '2vw',

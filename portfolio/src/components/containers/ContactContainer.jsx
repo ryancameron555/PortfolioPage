@@ -3,6 +3,7 @@
 import { Box } from '@mui/material';
 import PropTypes from 'prop-types';
 // import { useTheme } from '@mui/material/styles';
+import ContactForm from '../Forms/ContactForm';
 
 const ContainerA = ({ children }) => {
   // const theme = useTheme();
@@ -24,6 +25,7 @@ const ContainerA = ({ children }) => {
         opacity: '0.9',
       }}
     >
+      <ContactForm />
       {children}
     </Box>
   );

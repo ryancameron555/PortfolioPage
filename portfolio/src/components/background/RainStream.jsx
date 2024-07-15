@@ -1,6 +1,7 @@
 /** @format */
 
 import { useState, useEffect, useRef } from 'react';
+import theme from '../../Styling/theme';
 
 const VALID_CHARS = `abcdefghijklmnopqrstuvwxyz0123456789$+-*/=%"'#&_(),.;:?!\\|{}<>[]^~`;
 const STREAM_MUTATION_ODDS = 0.02;
@@ -77,13 +78,14 @@ const RainStream = () => {
       style={{
         marginTop: topPadding,
         fontFamily: 'matrixFont',
-        color: '#20c20e',
+        color: theme.palette.primary.main,
         writingMode: 'vertical-rl',
         textOrientation: 'upright',
         whiteSpace: 'nowrap',
         userSelect: 'none',
-        textShadow: '0px 0px 8px rgba(32, 194, 14, 0.8)',
+        textShadow: '0px 0px 25px rgba(32, 194, 14, 0.8)',
         fontSize: 25,
+        opacity: '0.2',
       }}
     >
       {stream.map((char, index) => (

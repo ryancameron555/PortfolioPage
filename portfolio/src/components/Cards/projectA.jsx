@@ -15,10 +15,10 @@ const ProjectA = ({ children }) => {
   return (
     <Card
       sx={{
-        MaxWidth: '50%',
+        MaxWidth: '100%',
         background: theme.palette.background.default,
-        margin: '3vh',
-        boxShadow: `0px 0px 25px ${theme.palette.primary.main}`,
+        margin: '1vh',
+        // boxShadow: `0px 0px 5px ${theme.palette.secondary.main}`,
       }}
     >
       <CardMedia
@@ -32,14 +32,16 @@ const ProjectA = ({ children }) => {
         <Typography gutterBottom variant="h5" component="div">
           Lizard
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="text.primary">
           Lizards are a widespread group of squamate reptiles, with over 6,000
           species, ranging across all continents except Antarctica
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button size="small" variant="contained">
+          Code
+        </Button>
+        <Button size="small">About</Button>
       </CardActions>
       {children}
     </Card>
