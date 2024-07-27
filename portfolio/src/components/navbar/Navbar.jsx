@@ -15,7 +15,13 @@ import { useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../../assets/rwcLogo.svg';
 
-const pages = ['About me', 'Projects', 'Documents', 'Contact me'];
+const pages = [
+  { name: 'About me', id: 'about' },
+  { name: 'Projects', id: 'projects' },
+  { name: 'Documents', id: 'documents' },
+  { name: 'Contact me', id: 'contact' },
+];
+
 const myName = 'RYAN CAMERON';
 
 function ResponsiveAppBar() {
@@ -30,6 +36,10 @@ function ResponsiveAppBar() {
     setAnchorElNav(null);
   };
 
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <AppBar
       position="fixed"
@@ -42,7 +52,10 @@ function ResponsiveAppBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* Logo */}
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <Box
+            sx={{ display: 'flex', alignItems: 'center' }}
+            onClick={handleLogoClick}
+          >
             <img
               src={logo}
               alt="Logo"
@@ -131,8 +144,13 @@ function ResponsiveAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem
+                  key={page.id}
+                  component="a"
+                  href={`#${page.id}`}
+                  onClick={handleCloseNavMenu}
+                >
+                  <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -150,7 +168,9 @@ function ResponsiveAppBar() {
           >
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.id}
+                component="a"
+                href={`#${page.id}`}
                 onClick={handleCloseNavMenu}
                 sx={{
                   fontFamily: theme.typography.h4.fontFamily,
@@ -165,7 +185,7 @@ function ResponsiveAppBar() {
                   },
                 }}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>

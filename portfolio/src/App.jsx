@@ -17,10 +17,18 @@ function App() {
       <CssBaseline />
       <MatrixRain />
       <ResponsiveAppBar />
-      <AboutMe />
-      <CardContainer />
-      <CertsContainer />
-      <ContactContainer />
+      <div id="about">
+        <AboutMe />
+      </div>
+      <div id="projects">
+        <CardContainer />
+      </div>
+      <div id="documents">
+        <CertsContainer />
+      </div>
+      <div id="contact">
+        <ContactContainer />
+      </div>
     </ThemeProvider>
   );
 }

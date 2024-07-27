@@ -148,6 +148,11 @@ const ContactForm = () => {
           multiline
           rows={4}
           required
+          InputProps={{
+            sx: {
+              resize: 'vertical',
+            },
+          }}
           sx={{
             width: '100%',
             marginTop: 2,
