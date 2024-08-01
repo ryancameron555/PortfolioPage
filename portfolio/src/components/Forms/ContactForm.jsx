@@ -10,6 +10,8 @@ import {
 } from '@mui/material';
 import emailjs from 'emailjs-com';
 import { useTheme } from '@mui/material/styles';
+import linkedinLogo from '../../assets/projectImages/linkedin.svg';
+import githubLogo from '../../assets/projectImages/github.svg';
 
 const ContactForm = () => {
   const theme = useTheme();
@@ -208,7 +210,7 @@ const ContactForm = () => {
             rel="noopener noreferrer"
           >
             <img
-              src="src\assets\projectImages\icons8-linkedin.svg"
+              src={linkedinLogo}
               alt="LinkedIn"
               style={{ width: '10vh', height: '10vh' }}
             />
@@ -219,7 +221,7 @@ const ContactForm = () => {
             rel="noopener noreferrer"
           >
             <img
-              src="src\assets\projectImages\github-logo-svgrepo-com.svg"
+              src={githubLogo}
               alt="GitHub"
               style={{
                 width: '8vh',
