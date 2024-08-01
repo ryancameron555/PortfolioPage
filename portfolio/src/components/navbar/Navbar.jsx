@@ -40,13 +40,36 @@ function ResponsiveAppBar() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleNavLinkClick = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      // Update the selector to correctly identify your header
+      const header =
+        document.querySelector('header') ||
+        document.querySelector('.header-class');
+      const headerOffset = header ? header.offsetHeight : 0;
+
+      // Calculate the position to scroll to
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - headerOffset;
+
+      // Smooth scroll to the element
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+    handleCloseNavMenu();
+  };
+
   return (
     <AppBar
       position="fixed"
       color="default"
       sx={{
         backgroundColor: theme.palette.background.default,
-        marginBottom: '20vh',
+        marginBottom: '10vh',
       }}
     >
       <Container maxWidth="xl">
@@ -93,7 +116,7 @@ function ResponsiveAppBar() {
                 wordBreak: 'keep-all',
                 whiteSpace: 'pre-wrap',
                 maxWidth: { xs: '100%', md: 'auto' },
-                textShadow: `0 0 20px ${theme.palette.secondary.main}`, // Adjusted text shadow for permanent glow
+                textShadow: `0 0 10px ${theme.palette.secondary.main}`, // Adjusted text shadow for permanent glow
               }}
             >
               {myName}
@@ -122,7 +145,7 @@ function ResponsiveAppBar() {
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: 'bottom',
+                vertical: 'top',
                 horizontal: 'left',
               }}
               keepMounted
@@ -146,9 +169,9 @@ function ResponsiveAppBar() {
               {pages.map((page) => (
                 <MenuItem
                   key={page.id}
-                  component="a"
-                  href={`#${page.id}`}
-                  onClick={handleCloseNavMenu}
+                  // component="a"
+                  // href={`#${page.id}`}
+                  onClick={() => handleNavLinkClick(page.id)}
                 >
                   <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
@@ -169,9 +192,9 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page.id}
-                component="a"
-                href={`#${page.id}`}
-                onClick={handleCloseNavMenu}
+                // component="a"
+                // href={`#${page.id}`}
+                onClick={() => handleNavLinkClick(page.id)}
                 sx={{
                   fontFamily: theme.typography.h4.fontFamily,
                   fontWeight: theme.typography.h4.fontWeight,
