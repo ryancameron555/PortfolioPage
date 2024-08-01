@@ -84,8 +84,8 @@ function ResponsiveAppBar() {
               alt="Logo"
               style={{
                 display: { xs: 'none', md: 'flex' },
-                height: '12.5vh',
-                marginRight: '10px',
+                height: '7.5vh',
+                // marginRight: '7.5',
               }}
             />
           </Box>
