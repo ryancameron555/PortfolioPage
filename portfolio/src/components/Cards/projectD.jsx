@@ -58,7 +58,7 @@ const ProjectA = ({ children }) => {
         <Button
           size="small"
           variant="contained"
-          href="https://github.com/ryancameron555/FullstackJudoWebsite"
+          href="https://github.com/ryancameron555/SoundPitch-Modifier"
           target="blank"
           rel="noopener noreferrer"
         >

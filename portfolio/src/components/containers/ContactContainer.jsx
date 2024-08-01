@@ -22,7 +22,7 @@ const ContainerA = ({ children }) => {
         minHeight: '20vh',
         // boxShadow: `0 0 20px ${theme.palette.primary.main}`,
         borderRadius: '2vw',
-        opacity: '0.9',
+        // opacity: '0.9',
       }}
     >
       <ContactForm />

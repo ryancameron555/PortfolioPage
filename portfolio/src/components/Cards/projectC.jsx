@@ -57,7 +57,7 @@ const ProjectA = ({ children }) => {
         <Button
           size="small"
           variant="contained"
-          href="https://github.com/ryancameron555/FullstackJudoWebsite"
+          href="https://github.com/ryancameron555/React-Big-Cats-List"
           target="blank"
           rel="noopener noreferrer"
         >

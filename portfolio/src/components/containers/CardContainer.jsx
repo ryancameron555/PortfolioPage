@@ -32,7 +32,7 @@ export default function CardContainer() {
         margin: '10vh auto',
         padding: '0px',
         // backgroundColor: theme.palette.background.default,
-        opacity: '0.9',
+        // opacity: '0.9',
         // boxShadow: `0 0 20px ${theme.palette.primary.main}`,
         borderRadius: '2vw',
       }}
