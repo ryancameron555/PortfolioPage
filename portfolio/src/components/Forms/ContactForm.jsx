@@ -79,6 +79,12 @@ const ContactForm = () => {
         }}
       >
         <Typography variant="h2">Contact Me</Typography>
+        <br />
+        <Typography variant="body1">
+          Feel free to connect with me for opportunities, questions, or
+          constructive feedback. I'm always eager to engage and collaborate.
+        </Typography>
+        <br />
 
         <Box
           sx={{

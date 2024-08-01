@@ -7,6 +7,9 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 // import { useTheme } from '@mui/material/styles';
 import ProjectA from '../Cards/projectA';
+import ProjectB from '../Cards/projectB';
+import ProjectC from '../Cards/projectC';
+import ProjectD from '../Cards/projectD';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.background.default,
@@ -43,6 +46,13 @@ export default function CardContainer() {
       >
         My Projects
       </Typography>
+      <br />
+      <Typography variant="body1">
+        These are some projects I have available to view on my Github page , I
+        plan to add many more projects which will increase in size and
+        complexity.
+      </Typography>
+      <br />
       <Grid container spacing={1}>
         <Grid item xs={12} sm={6} md={6}>
           <Item>
@@ -51,17 +61,17 @@ export default function CardContainer() {
         </Grid>
         <Grid item xs={12} sm={6} md={6}>
           <Item>
-            <ProjectA />
+            <ProjectB />
           </Item>
         </Grid>
         <Grid item xs={12} sm={6} md={6}>
           <Item>
-            <ProjectA />
+            <ProjectC />
           </Item>
         </Grid>
         <Grid item xs={12} sm={6} md={6}>
           <Item>
-            <ProjectA />
+            <ProjectD />
           </Item>
         </Grid>
       </Grid>
