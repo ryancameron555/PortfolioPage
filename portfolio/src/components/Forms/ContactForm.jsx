@@ -1,6 +1,13 @@
 /** @format */
 import { useState } from 'react';
-import { Box, TextField, Button, Snackbar, Alert } from '@mui/material';
+import {
+  Box,
+  TextField,
+  Button,
+  Snackbar,
+  Alert,
+  Typography,
+} from '@mui/material';
 import emailjs from 'emailjs-com';
 import { useTheme } from '@mui/material/styles';
 
@@ -61,7 +68,6 @@ const ContactForm = () => {
         onSubmit={handleSubmit}
         sx={{
           width: '100%',
-
           backgroundColor: theme.palette.background.default,
           opacity: '0.9',
           textAlign: 'center',
@@ -72,6 +78,8 @@ const ContactForm = () => {
           minHeight: '1vh',
         }}
       >
+        <Typography variant="h2">Contact Me</Typography>
+
         <Box
           sx={{
             display: 'flex',
@@ -133,7 +141,6 @@ const ContactForm = () => {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            required
             sx={{
               width: '100%',
               '& .MuiInputLabel-root': { color: theme.palette.text.primary },
@@ -147,7 +154,6 @@ const ContactForm = () => {
           onChange={handleChange}
           multiline
           rows={4}
-          required
           InputProps={{
             sx: {
               resize: 'vertical',
@@ -161,12 +167,54 @@ const ContactForm = () => {
         />
         <Button
           variant="contained"
+          size="large"
           color="primary"
           type="submit"
-          sx={{ backgroundColor: theme.palette.primary.main, marginTop: 2 }}
+          sx={{
+            backgroundColor: theme.palette.primary.main,
+            marginTop: 2,
+            margin: '5vw',
+          }}
         >
           Submit
         </Button>
+        <Box
+          sx={{
+            margin: '5vh',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: '2vw', // Space between the logos
+          }}
+        >
+          <a
+            href="https://www.linkedin.com/in/ryan-cameron-003686158/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="src\assets\projectImages\icons8-linkedin.svg"
+              alt="LinkedIn"
+              style={{ width: '10vh', height: '10vh' }}
+            />
+          </a>
+          <a
+            href="https://github.com/ryancameron555"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="src\assets\projectImages\github-logo-svgrepo-com.svg"
+              alt="GitHub"
+              style={{
+                width: '8vh',
+                height: '8vh',
+                backgroundColor: 'white',
+                borderRadius: '1vw',
+              }}
+            />
+          </a>
+        </Box>
       </Box>
       <Snackbar
         open={isSnackbarOpen}
