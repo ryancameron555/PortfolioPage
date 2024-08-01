@@ -9,7 +9,7 @@ const ContainerA = ({ children }) => {
   return (
     <Box
       sx={{
-        width: '85%',
+        width: '75%',
         margin: '20vh auto 10vh', // Adjusted margin for vertical spacing
         padding: '0px',
         // backgroundColor: theme.palette.background.default,

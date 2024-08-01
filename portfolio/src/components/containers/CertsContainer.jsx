@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 // import { useTheme } from '@mui/material/styles';
 import cvFile from '../../assets/Docs/cv.pdf';
 import certFile from '../../assets/Docs/certs.pdf';
+import theme from '../../Styling/theme';
 
 const CertsContainer = ({ children }) => {
   // const theme = useTheme();
@@ -25,7 +26,16 @@ const CertsContainer = ({ children }) => {
         opacity: '0.9',
       }}
     >
-      <Typography variant="h2">Documents</Typography>
+      <Typography
+        variant="h2"
+        sx={{
+          textDecoration: 'underline',
+          textDecorationColor: theme.palette.primary.main,
+          textShadow: `0 0 20px ${theme.palette.secondary.main}`,
+        }}
+      >
+        Documents
+      </Typography>
       <br />
       <Typography variant="body1">
         Feel free to download a copy of my CV and Certifications, if you have

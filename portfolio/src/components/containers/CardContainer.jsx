@@ -10,6 +10,7 @@ import ProjectA from '../Cards/projectA';
 import ProjectB from '../Cards/projectB';
 import ProjectC from '../Cards/projectC';
 import ProjectD from '../Cards/projectD';
+import theme from '../../Styling/theme';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.background.default,
@@ -42,6 +43,9 @@ export default function CardContainer() {
         id="projects"
         sx={{
           textAlign: 'center',
+          textDecoration: 'underline',
+          textDecorationColor: theme.palette.primary.main,
+          textShadow: `0 0 20px ${theme.palette.secondary.main}`,
         }}
       >
         My Projects

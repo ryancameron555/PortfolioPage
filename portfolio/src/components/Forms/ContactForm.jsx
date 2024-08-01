@@ -78,7 +78,16 @@ const ContactForm = () => {
           minHeight: '1vh',
         }}
       >
-        <Typography variant="h2">Contact Me</Typography>
+        <Typography
+          variant="h2"
+          sx={{
+            textDecoration: 'underline',
+            textDecorationColor: theme.palette.primary.main,
+            textShadow: `0 0 20px ${theme.palette.secondary.main}`,
+          }}
+        >
+          Contact Me
+        </Typography>
         <br />
         <Typography variant="body1">
           Feel free to connect with me for opportunities, questions, or

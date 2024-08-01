@@ -50,7 +50,7 @@ const ProjectA = ({ children }) => {
           Hajamie Judo
         </Typography>
         <Typography variant="body2" color="text.primary">
-          Fullstack Judo Club website with general club information. SQL
+          Full-stack Judo Club website with general club information. SQL
           database and API usage to create exercises based on user input.
         </Typography>
       </CardContent>
@@ -74,10 +74,10 @@ const ProjectA = ({ children }) => {
           <DialogTitle>About</DialogTitle>
           <DialogContent>
             <DialogContentText>
-              Hajamie Judo is a fullstack Judo Club website that provides
-              general information about the club. It features an SQL database
-              and API usage to create exercises based on user input. This
-              project showcases various fullstack development skills and
+              This project is a full-stack website for my Judo club that
+              provides general information about the club. It features an SQL
+              database and API usage to create exercises based on user input.
+              This project showcases various fullstack development skills and
               techniques.
             </DialogContentText>
           </DialogContent>

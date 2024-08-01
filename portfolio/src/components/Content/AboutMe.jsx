@@ -8,11 +8,21 @@
 
 import Typography from '@mui/material/Typography';
 import ContainerA from '../containers/AboutContainer';
+import theme from '../../Styling/theme';
 
 function AboutMe() {
   return (
     <ContainerA id="about">
-      <Typography variant="h2" gutterBottom id="about">
+      <Typography
+        variant="h2"
+        gutterBottom
+        id="about"
+        sx={{
+          textDecoration: 'underline',
+          textDecorationColor: theme.palette.primary.main,
+          textShadow: `0 0 20px ${theme.palette.secondary.main}`,
+        }}
+      >
         About Me
       </Typography>
       <Typography variant="body1">
