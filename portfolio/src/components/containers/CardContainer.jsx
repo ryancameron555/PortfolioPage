@@ -14,7 +14,7 @@ import theme from '../../Styling/theme';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.background.default,
-  opacity: '0.9',
+  // opacity: '0.9',
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
@@ -35,6 +35,8 @@ export default function CardContainer() {
         // opacity: '0.9',
         // boxShadow: `0 0 20px ${theme.palette.primary.main}`,
         borderRadius: '2vw',
+        textAlign: 'center',
+        justifyContent: 'center',
       }}
     >
       <Typography

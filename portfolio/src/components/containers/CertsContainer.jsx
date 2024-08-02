@@ -38,8 +38,8 @@ const CertsContainer = ({ children }) => {
       </Typography>
       <br />
       <Typography variant="body1">
-        Feel free to download a copy of my CV and Certifications, if you have
-        any questions please feel free to contact me.
+        You can download a copy of my CV and Certifications, I am happy to
+        discuss further.
       </Typography>
       <br />
       <Stack spacing={5} direction={{ xs: 'column', sm: 'row' }}>
