@@ -35,10 +35,16 @@ const theme = createTheme({
       letterSpacing: '.3rem',
     },
     h4: {
-      fontSize: '1.5',
+      fontSize: '1.5rem',
       fontFamily: 'inherit',
       fontWeight: 700,
       letterSpacing: '.1rem',
+    },
+    h5: {
+      fontSize: '0.75rem',
+      fontFamily: 'inherit',
+      fontWeight: 500,
+      letterSpacing: '.05rem',
     },
     body1: {
       fontSize: '1rem',

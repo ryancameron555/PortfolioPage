@@ -14,6 +14,7 @@ import {
 import { useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../../assets/rwcLogo.svg';
+import rabbit from '../../assets/rabbit.svg';
 
 const pages = [
   { name: 'About me', id: 'about' },
@@ -130,7 +131,7 @@ function ResponsiveAppBar() {
           <Box sx={{ display: { xs: 'flex', md: 'none' }, flexGrow: 0 }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
+              aria-label="menu"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
@@ -139,7 +140,33 @@ function ResponsiveAppBar() {
                 color: theme.palette.primary.main,
               }}
             >
-              <MenuIcon />
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                }}
+              >
+                <img src={rabbit} alt="Menu" style={{ height: '5vh' }} />
+                <Typography
+                  variant="h5"
+                  component="div"
+                  sx={{
+                    fontFamily: theme.typography.h5.fontFamily,
+                    fontWeight: theme.typography.h5.fontWeight,
+                    letterSpacing: theme.typography.h5.letterSpacing,
+                    color: theme.palette.text.primary,
+                    textDecoration: 'none',
+                    overflowWrap: 'break-word',
+                    wordBreak: 'keep-all',
+                    whiteSpace: 'pre-wrap',
+                    maxWidth: { xs: '100%', md: 'auto' },
+                    textShadow: `0 0 10px ${theme.palette.secondary.main}`, // Adjusted text shadow for permanent glow
+                  }}
+                >
+                  Menu
+                </Typography>
+              </Box>
             </IconButton>
             <Menu
               id="menu-appbar"
