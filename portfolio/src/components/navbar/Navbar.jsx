@@ -12,9 +12,9 @@ import {
   MenuItem,
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-// import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../../assets/rwcLogo.svg';
 import rabbit from '../../assets/rabbit.svg';
+import { ArrowDropDown } from '@mui/icons-material';
 
 const pages = [
   { name: 'About me', id: 'about' },
@@ -147,14 +147,12 @@ function ResponsiveAppBar() {
                   alignItems: 'center',
                 }}
               >
-                <img src={rabbit} alt="Menu" style={{ height: '5vh' }} />
                 <Typography
                   variant="h5"
                   component="div"
                   sx={{
-                    fontFamily: theme.typography.h5.fontFamily,
-                    fontWeight: theme.typography.h5.fontWeight,
-                    letterSpacing: theme.typography.h5.letterSpacing,
+                    fontFamily: 'cursive',
+                    fontSize: '0.5rem',
                     color: theme.palette.text.primary,
                     textDecoration: 'none',
                     overflowWrap: 'break-word',
@@ -164,8 +162,10 @@ function ResponsiveAppBar() {
                     textShadow: `0 0 10px ${theme.palette.secondary.main}`, // Adjusted text shadow for permanent glow
                   }}
                 >
-                  Menu
+                  Follow the
                 </Typography>
+                <img src={rabbit} alt="Menu" style={{ height: '7.5vh' }} />
+                <ArrowDropDown sx={{ fontSize: 20, color: 'white' }} />
               </Box>
             </IconButton>
             <Menu
