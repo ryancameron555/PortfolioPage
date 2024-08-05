@@ -12,7 +12,7 @@ import {
   MenuItem,
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import MenuIcon from '@mui/icons-material/Menu';
+// import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../../assets/rwcLogo.svg';
 import rabbit from '../../assets/rabbit.svg';
 

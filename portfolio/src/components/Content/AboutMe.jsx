@@ -25,11 +25,14 @@ function AboutMe() {
       >
         About Me
       </Typography>
+      <Typography variant="h4" gutterBottom>
+        Welcome! I&apos;m Ryan Cameron
+      </Typography>
       <Typography variant="body1">
-        <h4>Welcome! I&apos;m Ryan Cameron ,</h4> an aspiring software developer
-        based in Waikato, NZ. I have a deep passion for software development and
-        exploring new technologies. I aim to put my IOD/AUT Software Engineering
-        qualification to use and create some exciting projects
+        an aspiring software developer based in Waikato, NZ. I have a deep
+        passion for software development and exploring new technologies. I aim
+        to put my IOD/AUT Software Engineering qualification to use and create
+        some exciting projects
       </Typography>
     </ContainerA>
   );

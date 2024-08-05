@@ -69,7 +69,7 @@ const RainStream = () => {
       setStream(getRandStream);
     } else {
       setTopPadding(topPadding + 44);
-      setStream(getMutatedStream);
+      setStream((prevStream) => getMutatedStream(prevStream));
     }
   }, 100);
 
@@ -90,7 +90,7 @@ const RainStream = () => {
     >
       {stream.map((char, index) => (
         <a
-          key={index}
+          key={`${char}-${index}`}
           style={{
             color: index === stream.length - 1 ? '#fff' : undefined,
             opacity: index < 6 ? 0.1 + index * 0.15 : 1,

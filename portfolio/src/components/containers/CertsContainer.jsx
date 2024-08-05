@@ -128,7 +128,7 @@ const CertsContainer = ({ children }) => {
 };
 
 CertsContainer.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
 
 export default CertsContainer;

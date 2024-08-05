@@ -29,7 +29,7 @@ const DialogContainer = ({ children }) => {
 };
 
 DialogContainer.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
 
 export default DialogContainer;

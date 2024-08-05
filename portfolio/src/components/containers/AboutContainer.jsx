@@ -30,7 +30,7 @@ const ContainerA = ({ children }) => {
 };
 
 ContainerA.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
 
 export default ContainerA;

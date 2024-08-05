@@ -92,7 +92,7 @@ const ProjectA = ({ children }) => {
 };
 
 ProjectA.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
 
 export default ProjectA;

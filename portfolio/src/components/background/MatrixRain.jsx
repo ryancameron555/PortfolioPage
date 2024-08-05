@@ -1,8 +1,20 @@
 /** @format */
+import { useState, useEffect } from 'react';
 import RainStream from './RainStream';
 
 const MatrixRain = () => {
-  const streamCount = Math.floor(window.innerWidth / 36);
+  const [streamCount, setStreamCount] = useState(
+    Math.floor(window.innerWidth / 36)
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setStreamCount(Math.floor(window.innerWidth / 36));
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   return (
     <div
       style={{
@@ -16,9 +28,9 @@ const MatrixRain = () => {
         zIndex: '-1',
       }}
     >
-      {new Array(streamCount).fill().map(() => (
+      {new Array(streamCount).fill().map((_, index) => (
         // eslint-disable-next-line react/jsx-key
-        <RainStream />
+        <RainStream key={index} />
       ))}
     </div>
   );

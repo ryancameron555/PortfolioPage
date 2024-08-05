@@ -35,7 +35,7 @@ const theme = createTheme({
       letterSpacing: '.3rem',
     },
     h4: {
-      fontSize: '1.5rem',
+      fontSize: '1.25rem',
       fontFamily: 'inherit',
       fontWeight: 700,
       letterSpacing: '.1rem',
