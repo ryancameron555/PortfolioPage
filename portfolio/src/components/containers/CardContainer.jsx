@@ -10,6 +10,7 @@ import ProjectA from '../Cards/projectA';
 import ProjectB from '../Cards/projectB';
 import ProjectC from '../Cards/projectC';
 import ProjectD from '../Cards/projectD';
+import ProjectE from '../Cards/projectE';
 import theme from '../../Styling/theme';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -78,6 +79,11 @@ export default function CardContainer() {
         <Grid item xs={12} sm={6} md={6}>
           <Item>
             <ProjectD />
+          </Item>
+        </Grid>
+        <Grid item xs={12} sm={6} md={6}>
+          <Item>
+            <ProjectE />
           </Item>
         </Grid>
       </Grid>
