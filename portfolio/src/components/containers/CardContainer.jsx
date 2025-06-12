@@ -63,6 +63,11 @@ export default function CardContainer() {
       <Grid container spacing={1}>
         <Grid item xs={12} sm={6} md={6}>
           <Item>
+            <ProjectE />
+          </Item>
+        </Grid>
+        <Grid item xs={12} sm={6} md={6}>
+          <Item>
             <ProjectA />
           </Item>
         </Grid>
@@ -79,11 +84,6 @@ export default function CardContainer() {
         <Grid item xs={12} sm={6} md={6}>
           <Item>
             <ProjectD />
-          </Item>
-        </Grid>
-        <Grid item xs={12} sm={6} md={6}>
-          <Item>
-            <ProjectE />
           </Item>
         </Grid>
       </Grid>
