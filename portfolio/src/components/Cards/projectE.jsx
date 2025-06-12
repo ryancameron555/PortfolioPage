@@ -13,7 +13,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { useTheme } from '@mui/material/styles';
 import PropTypes from 'prop-types';
-import cats from '../../assets/projectImages/cats.jpeg';
+import MemoryGame from '../../assets/projectImages/MemoryGame.jpeg';
 import { useState } from 'react';
 import DialogContainer from '../containers/DialogContainer';
 
@@ -42,8 +42,8 @@ const ProjectA = ({ children }) => {
         sx={{
           height: '25vh',
         }}
-        image={cats}
-        title="Hajamie Judo Logo"
+        image={MemoryGame}
+        title="Memory Game Logo"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
@@ -74,9 +74,11 @@ const ProjectA = ({ children }) => {
           <DialogTitle>About</DialogTitle>
           <DialogContent>
             <DialogContentText>
-              This project holds a list of big cats including their Latin name.
-              The list has buttons which can sort alphabetically ,reverse the
-              sort order , filter for the Panthera family and reset the filter.
+              This project is a simple memory game using standard cards , I
+              intend to develop this further to add difficulty levels , a
+              leaderboard and functionality to challenge friends and family. I
+              have created this with React and used States/Effects to get things
+              working.
             </DialogContentText>
           </DialogContent>
           <DialogActions>
