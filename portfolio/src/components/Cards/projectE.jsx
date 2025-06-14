@@ -58,7 +58,7 @@ const ProjectA = ({ children }) => {
         <Button
           size="small"
           variant="contained"
-          href="https://ryancameron555.github.io/MemoryGame/t"
+          href="https://ryancameron555.github.io/MemoryGame/"
           target="blank"
           rel="noopener noreferrer"
         >
