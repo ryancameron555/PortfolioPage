@@ -58,9 +58,12 @@ const ProjectA = ({ children }) => {
         <Button
           size="small"
           variant="contained"
-          href="https://ryancameron555.github.io/MemoryGame/"
-          target="blank"
-          rel="noopener noreferrer"
+          onClick={() =>
+            window.open(
+              'https://ryancameron555.github.io/MemoryGame/',
+              '_blank'
+            )
+          }
         >
           Try Me!
         </Button>
